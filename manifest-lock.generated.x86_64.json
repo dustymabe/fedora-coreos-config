@@ -1,12 +1,16 @@
 {
-  "packages" : [
-    [
-      "kernel-5.0.0-300.fc30.x86_64",
-      "sha256:None"
-    ],
-    [
-      "systemd-241-2.gita09c170.fc30.x86_64",
-      "sha256:None"
-    ]
-  ]
+  "packages": {
+    "bash": {
+      "evra": "5.0.2-1.fc30.x86_64",
+      "digest": "sha256:none"
+    },
+    "kernel": {
+      "evra": "5.0.0-300.fc30.x86_64",
+      "digest": "sha256:none"
+    },
+    "systemd": {
+      "evra": "241-2.gita09c170.fc30.x86_64",
+      "digest": "sha256:none"
+    }
+  }
 }
