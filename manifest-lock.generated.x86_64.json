@@ -1,0 +1,12 @@
+{
+  "packages" : [
+    [
+      "kernel-5.0.0-300.fc30.x86_64",
+      "sha256:None"
+    ],
+    [
+      "systemd-241-2.gita09c170.fc30.x86_64",
+      "sha256:None"
+    ]
+  ]
+}
