@@ -5,7 +5,7 @@
       "digest": "sha256:none"
     },
     "fedora-gather-easyfix": {
-      "evra": "0.1.1-21.fc30",
+      "evra": "0.1.1-21.fc30.noarch",
       "digest": "sha256:none"
     },
     "passmenu": {
