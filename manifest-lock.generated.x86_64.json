@@ -1,5 +1,13 @@
 {
   "packages": {
+    "avahi-libs": {
+      "evra": "0.7-18.fc30.x86_64",
+      "digest": "sha256:335068a13191336a4264eefcdd744d7453e0a5af451e1d60fd7b215a1620d534"
+    },
+    "basesystem": {
+      "evra": "11-7.fc30.noarch",
+      "digest": "sha256:df96312e6f1e9966393b3908be58821e3aaa793fe0ae386c154ddd26e11a4928"
+    },
     "systemd": {
       "evra": "241-2.gita09c170.fc30.x86_64",
       "digest": "sha256:none"
