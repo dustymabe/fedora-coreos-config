@@ -1,0 +1,8 @@
+{
+  "packages": {
+    "0ad": {
+      "evra": "0.0.23b-6.fc30.aarch64",
+      "digest": "sha256:none"
+    }
+  }
+}
