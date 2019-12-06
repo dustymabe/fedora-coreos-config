@@ -1,7 +1,5 @@
 packages:
-  adwaita-blue-gtk-theme:
-    evra: 3.22.21.0-10.fc30.noarch
   fedora-gather-easyfix:
-    evra: 0.1.1-21.fc30.noarch
+    evra: 0.1.1-52.fc30.noarch
   passmenu:
     evra: 1.7.3-4.fc30.noarch
