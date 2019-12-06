@@ -4,4 +4,4 @@ packages:
   passmenu:
     evra: 1.7.3-4.fc30.noarch
   fedora-workstation-backgrounds:
-    evra: 1.1-6.fc30
+    evra: 1.1-6.fc30.noarch
