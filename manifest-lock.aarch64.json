@@ -1,0 +1,7 @@
+{
+  "packages": {
+    "python3-arrow": {
+     "evra": "0.12.1-26.fc30.noarch"
+    }
+  }
+}
