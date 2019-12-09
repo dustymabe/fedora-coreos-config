@@ -1,7 +1,0 @@
-packages:
-  fedora-gather-easyfix:
-    evra: 0.1.1-52.fc30.noarch
-  passmenu:
-    evra: 1.7.3-4.fc30.noarch
-  fedora-workstation-backgrounds:
-    evra: 1.1-6.fc30.noarch
