@@ -14,6 +14,7 @@ repos:
   # still pinned
   - fedora
   - fedora-updates
+  - copr:copr.fedorainfracloud.org:networkmanager:NetworkManager-master
 
 # All Fedora CoreOS streams share the same pool for locked files.
 # This will be in fedora-coreos.yaml in the future so it can be more easily be
