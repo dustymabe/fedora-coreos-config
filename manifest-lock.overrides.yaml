@@ -54,3 +54,13 @@ packages:
     metadata:
       reason: https://github.com/coreos/fedora-coreos-tracker/issues/1059
       type: pin
+  systemd-debuginfo:
+    evr: 249.7-2.fc35
+    metadata:
+      reason: https://github.com/coreos/fedora-coreos-tracker/issues/1059
+      type: pin
+  systemd-debugsource:
+    evr: 249.7-2.fc35
+    metadata:
+      reason: https://github.com/coreos/fedora-coreos-tracker/issues/1059
+      type: pin
