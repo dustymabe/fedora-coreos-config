@@ -1,0 +1,11 @@
+[Unit]                                                                                                              
+Requires=dev-virtio\\x2dports-mantlejournal.device                                                                                                       
+IgnoreOnIsolate=true                                                                                                                                     
+[Service]                                                                                                                                                
+Type=simple                                                                                                                                              
+StandardOutput=file:/dev/virtio-ports/mantlejournal                                                                                                      
+# Wrap in /bin/bash to hack around SELinux                                                                                                               
+# https://bugzilla.redhat.com/show_bug.cgi?id=1942198                                                                                                    
+ExecStart=/usr/bin/bash -c "journalctl -b -f --no-tail"                                                                                    
+[Install]                                                                                                                                                
+RequiredBy=basic.target

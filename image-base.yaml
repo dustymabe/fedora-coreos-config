@@ -9,6 +9,9 @@ size: 10
 extra-kargs:
     # Disable SMT on systems vulnerable to MDS or any similar future issue.
     - mitigations=auto,nosmt
+    - systemd.log_color=no
+#   - systemd.log_target=console
+#   - systemd.log_level=debug
 
 # Disable networking by default on firstboot. We can drop this once cosa stops
 # defaulting to `ip=auto rd.neednet=1` when it doesn't see this key.
