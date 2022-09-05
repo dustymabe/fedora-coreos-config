@@ -148,6 +148,7 @@ cat >>"${UNIT_DIR}/run-ephemeral.mount" <<EOF
 DefaultDependencies=false
 Requires=sysroot-xfs-ephemeral-mkfs.service
 After=sysroot-xfs-ephemeral-mkfs.service
+Before=systemd-udevd.service
 Before=systemd-udev-settle.service
 [Mount]
 What=/run/ephemeral.xfsloop
