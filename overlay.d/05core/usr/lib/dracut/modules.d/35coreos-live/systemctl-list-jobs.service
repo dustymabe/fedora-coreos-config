@@ -4,8 +4,7 @@ IgnoreOnIsolate=true
 Type=simple
 StandardOutput=journal
 StandardError=journal
-ExecStart=sleep 2
-ExecStart=bash -c "while true; do systemctl list-jobs --after --before; sleep 1; done"
+ExecStart=bash -c "sleep 2; while true; do systemctl list-jobs --after --before; sleep 1; done"
 KillMode=None
 [Install]                                                                                                                                                
 RequiredBy=basic.target
