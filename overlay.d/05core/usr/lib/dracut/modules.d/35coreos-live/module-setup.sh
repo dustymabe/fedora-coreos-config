@@ -56,6 +56,6 @@ install() {
     install_and_enable_unit "mantle-virtio-journal-stream.service" \
         "default.target"
 
-    install_and_enable_unit "systemctl-list-jobs.service" \
-        "default.target"
+#   install_and_enable_unit "systemctl-list-jobs.service" \
+#       "default.target"
 }
