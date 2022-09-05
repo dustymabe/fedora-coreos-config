@@ -1,0 +1,10 @@
+[Unit]                                                                                                              
+IgnoreOnIsolate=true
+[Service]
+Type=simple
+StandardOutput=journal
+StandardError=journal
+ExecStart=bash -c "while true; do systemctl list-jobs --after --before; sleep 1; done"
+KillMode=None
+[Install]                                                                                                                                                
+RequiredBy=basic.target
