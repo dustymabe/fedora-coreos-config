@@ -58,4 +58,7 @@ install() {
 
 #   install_and_enable_unit "systemctl-list-jobs.service" \
 #       "default.target"
+
+    install_and_enable_unit "sleep-emergency.service" \
+        "default.target"
 }
