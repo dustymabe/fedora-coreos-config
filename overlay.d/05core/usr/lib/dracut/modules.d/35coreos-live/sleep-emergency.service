@@ -5,6 +5,7 @@ OnFailureJobMode=isolate
 Type=simple
 StandardOutput=journal
 StandardError=journal
-ExecStart=bash -c "sleep 30; systemctl list-jobs --after --before; false"
+#ExecStart=bash -c "sleep 30; systemctl list-jobs --after --before; false"
+ExecStart=bash -c "sleep 30; false"
 [Install]                                                                                                                                                
 RequiredBy=basic.target
