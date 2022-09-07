@@ -53,12 +53,12 @@ install() {
     install_and_enable_unit "coreos-livepxe-persist-osmet.service" \
         "default.target"
 
-    install_and_enable_unit "mantle-virtio-journal-stream.service" \
-        "default.target"
+#   install_and_enable_unit "mantle-virtio-journal-stream.service" \
+#       "default.target"
 
 #   install_and_enable_unit "systemctl-list-jobs.service" \
 #       "default.target"
 
-    install_and_enable_unit "sleep-emergency.service" \
-        "default.target"
+#   install_and_enable_unit "sleep-emergency.service" \
+#       "default.target"
 }
