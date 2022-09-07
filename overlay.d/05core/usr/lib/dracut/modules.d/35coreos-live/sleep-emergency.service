@@ -1,11 +1,8 @@
-[Unit]                                                                                                              
-OnFailure=emergency.target
-OnFailureJobMode=isolate
 [Service]
 Type=simple
 StandardOutput=journal
 StandardError=journal
+ExecStart=echo "fatal: tracker issue workaround engaged for https://github.com/coreos/fedora-coreos-tracker/issues/1233"
 #ExecStart=bash -c "sleep 30; systemctl list-jobs --after --before; false"
-ExecStart=bash -c "sleep 30; false"
-[Install]                                                                                                                                                
+[Install]
 RequiredBy=basic.target
