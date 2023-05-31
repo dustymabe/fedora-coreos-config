@@ -42,3 +42,9 @@ packages:
     metadata:
       reason: https://github.com/coreos/fedora-coreos-tracker/issues/1476
       type: pin
+  google-compute-engine-guest-configs-udev:
+    evra: 20230526.00-2.fc38.noarch
+    metadata:
+      bodhi: https://bodhi.fedoraproject.org/updates/FEDORA-2023-84a4fea7ce
+      reason: https://github.com/coreos/fedora-coreos-tracker/issues/1494
+      type: fast-track
