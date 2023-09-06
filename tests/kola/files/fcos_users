@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 ## kola:
 ##   distros: fcos
-##   exclusive: false
+##   exclusive: true
 ##   description: Verify system users that are shipped as part of the base OS.
 
 # Those users come in different shapes (with static or dynamic IDs, from
@@ -73,7 +73,7 @@ declare -A coreos_users_static=( \
     ["systemd-network"]="991:990" \
     ["systemd-resolve"]="990:989" \
     ["systemd-bus-proxy"]="989:988" \
-    ["cockpit-ws"]="988:987" \
+    ["cockpit-ws"]="989:987" \
 )
 for username in "${!coreos_users_static[@]}"; do
     ids="${coreos_users_static[$username]}";
