@@ -46,6 +46,7 @@ RUN --mount=type=cache,rw,id=coreos-build-cache,target=/cache \
     --mount=type=secret,id=yumrepos,target=/etc/yum.repos.d/secret.repo \
     --mount=type=secret,id=contentsets \
         /src/build-rootfs --srcdir=/src make-rootfs --target-rootfs /target-rootfs
+RUN false
 RUN --mount=type=bind,target=/run/src,rw \
       rpm-ostree experimental compose build-chunked-oci \
         --bootc --format-version=1 --rootfs /target-rootfs \
