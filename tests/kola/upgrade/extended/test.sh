@@ -6,6 +6,7 @@
 ##   timeoutMin: 75
 ##   # Bigger disk since we copy in the OSTree tarball
 ##   minDisk: 30
+##   minMemory: 1536
 ##   # Only run this test when specifically requested.
 ##   requiredTag: extended-upgrade
 ##   description: Verify upgrade works.
