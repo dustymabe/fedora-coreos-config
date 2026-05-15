@@ -4,6 +4,8 @@
 ##   tags: "needs-internet"
 ##   # Extend the timeout since a lot of updates/reboots can happen.
 ##   timeoutMin: 75
+##   # Bigger disk since we copy in the OSTree tarball
+##   minDisk: 20
 ##   # Only run this test when specifically requested.
 ##   requiredTag: extended-upgrade
 ##   description: Verify upgrade works.
@@ -55,6 +57,12 @@ set -eux -o pipefail
 
 need_restart='false'
 arch=$(arch)
+
+
+if [ -f "$KOLA_EXT_DATA/ostree-repo.tar" ]; then
+    tar -C /srv/ -xf "$KOLA_EXT_DATA/ostree-repo.tar"
+    rm -vf "$KOLA_EXT_DATA/ostree-repo.tar"
+fi
 
 # delete the disabling of updates that was done by the test framework
 if [ -f /etc/zincati/config.d/90-disable-auto-updates.toml ]; then
@@ -235,11 +243,10 @@ selinux-sanity-check() {
         paths="$(echo "${mislabeled}" | grep "Would relabel" | cut -d ' ' -f 3)"
         found=""
         while read -r path; do
-            # Add in a glob exception for /usr/etc/systemd/system for <F43 releases
-            # https://github.com/coreos/fedora-coreos-tracker/issues/2030#issuecomment-3329932294
-            if [[ "${path}" =~ /usr/etc/systemd/system ]] && [ "$(get_fedora_ver)" -eq 42 ]; then
+            # Add in a glob exception for /var/srv since that's where our OSTree repo is
+            if [[ "${path}" =~ /var/srv ]]; then
                  continue
-             fi
+            fi
             if [[ "${exceptions[$path]:-noexception}" == 'noexception' ]]; then
                 echo "Unexpected mislabeled file found: ${path}"
                 found="1"
