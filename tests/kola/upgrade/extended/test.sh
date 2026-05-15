@@ -5,7 +5,7 @@
 ##   # Extend the timeout since a lot of updates/reboots can happen.
 ##   timeoutMin: 75
 ##   # Bigger disk since we copy in the OSTree tarball
-##   minDisk: 20
+##   minDisk: 30
 ##   # Only run this test when specifically requested.
 ##   requiredTag: extended-upgrade
 ##   description: Verify upgrade works.
