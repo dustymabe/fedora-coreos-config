@@ -49,3 +49,9 @@ storage:
           ExecStartPre=/bin/bash -c \
             "test -f /usr/lib/systemd/system/zincati.service.d/010-oci-migration.conf && \
                 cp -v /usr/etc/ostree/remotes.d/fedora.conf /etc/ostree/remotes.d/fedora.conf || true"
+    - path: /etc/systemd/system/rpm-ostreed.service.d/debug.conf
+      mode: 0644
+      contents:
+        inline: |
+          [Service]
+          Environment="RUST_LOG=debug"
