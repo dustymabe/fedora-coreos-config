@@ -59,7 +59,7 @@ set -eux -o pipefail
 need_restart='false'
 arch=$(arch)
 
-
+# If there is an ostree repo archive tarball, let's extract/use it.
 if [ -f "$KOLA_EXT_DATA/ostree-repo.tar" ]; then
     tar -C /srv/ -xf "$KOLA_EXT_DATA/ostree-repo.tar"
     rm -vf "$KOLA_EXT_DATA/ostree-repo.tar"
@@ -397,4 +397,13 @@ while true; do
     # Ignore error here. Older systemd (~F32) errors here if one of
     # the services isn't active.
     systemctl status rpm-ostreed zincati --lines=0 || true
+
+    lines="$(journalctl --since='5 minutes ago' -u rpm-ostreed)"
+    if [ -z "${lines}" ]; then
+        echo "rpm-ostree has stalled for more than 5 minutes; restarting zincati"
+        sudo systemctl stop zincati
+        sudo rpm-ostree cancel
+        sudo systemctl start zincati
+    fi
+   #journalctl -u rpm-ostreed --reverse -n 1 --field SYSLOG_TIMESTAMP
 done
